@@ -17,20 +17,16 @@ footer: 第1回 見て，感じて，描いてみよう | T.Shimizu © 2025
 
 ---
 
-# 本日のスケジュール（90分）
+# 本日の授業内容
 
-<div align=center>
+- 授業導入・自己紹介，「メディアとは何か？」
+- p5.jsの概要と描画の基本
+- 例題：抽象アートを作ろう
+- 解説：生成的アートの考え方
+- 課題制作：「感情」や「音楽」をテーマに
+- ふりかえり・感想
 
-|   時間    |                    内容                    |
-| --------- | ------------------------------------------ |
-| 0:00–0:10 | 授業導入・自己紹介、「メディアとは何か？」 |
-| 0:10–0:25 | p5.jsの概要と描画の基本                    |
-| 0:25–0:45 | 例題：抽象アートを作ろう                   |
-| 0:45–0:55 | 解説：生成的アートの考え方                 |
-| 0:55–1:25 | 課題制作：「感情」や「音楽」をテーマに     |
-| 1:25–1:30 | ふりかえり・感想                           |
-
-</div>
+※適当なタイミングで10分間の休憩を入れます
 
 ---
 
@@ -44,19 +40,19 @@ footer: 第1回 見て，感じて，描いてみよう | T.Shimizu © 2025
 
 # 本日使用するツール
 
-- iPad（第10世代）＋ Bluetoothキーボード
-- Google Chrome ブラウザ(Safariでも可)
+- iPad（第10世代）＋ Bluetoothキーボード ＋ マウス（なくてもOK）
+- Safari ブラウザ(Google Chrome でも可)
 - https://editor.p5js.org/
 
 ---
 
 # p5.jsとは？
 
--	jsベースのビジュアルプログラミングライブラリ
+-	JavaScriptベースのビジュアルプログラミングライブラリ
 - Webブラウザで動く
 -	図形，色，動き，インタラクションを簡単に実装
 -	教育，アート，Webで広く利用されている
-- p5 = [Processing](https://processing.org/) , js = [js](https://developer.mozilla.org/ja/docs/Web/js)
+- p5 = [Processing](https://processing.org/) , js = [JavaScript](https://developer.mozilla.org/ja/docs/Web/js)
 
 ---
 
@@ -148,11 +144,11 @@ line(0, 0, 300, 300);
 # 色をつける
 
 - [`fill()`](https://p5js.org/reference/p5/fill/)：図形などの中を塗りつぶす色
-- [`stroke()`](https://p5js.org/reference/p5/stroke/)：枠線などの色
+- [`stroke()`](https://p5js.org/reference/p5/stroke/)：枠線など線の色
 - [`background()`](https://p5js.org/reference/p5/background/)：背景色
 - 色の指定方法
-  - `fill(グレースケール)`：値が1つの場合グレースケール（値：`0`〜`255`）
-  - `fill(赤, 緑, 青)`：値が3つの場合フルカラー（値：`0`〜`255`）
+  - `fill(gray)`：値が1つの場合グレースケール（値：`0`〜`255`）
+  - `fill(Red, Green, Blue)`：値が3つの場合フルカラー（値：`0`〜`255`）
 
 ```js
 fill(255, 0, 0);
@@ -218,7 +214,7 @@ function draw() {
   - `random()`：`0`〜`1`までの乱数（実数）を生成
   - `random(5)`：`0`〜`5`までの乱数（実数）を生成
   - `random(10, 100)`：`10`〜`100`までの乱数（実数）を生成
-- [`touchStarted()`](https://p5js.org/reference/p5.Element/touchStarted/)：クリックで追加
+- [`touchStarted()`](https://p5js.org/reference/p5.Element/touchStarted/)：タッチで追加（マウスのひとは`mousePressed()`を利用）
 - [`noStroke()`](https://p5js.org/reference/p5/noStroke/)：枠線を描画しない
 - [`fill()`](https://p5js.org/reference/p5/fill/), [`background()`](https://p5js.org/reference/p5/background/) を工夫
 
