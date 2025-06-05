@@ -30,9 +30,6 @@ footer: 第1回 見て，感じて，描いてみよう | T.Shimizu © 2025
 - 授業導入・自己紹介，「メディアとは何か？」
 - p5.jsの概要と描画の基本
 - 例題：抽象アートを作ろう
-- 解説：生成的アートの考え方
-- 課題制作：「感情」や「音楽」をテーマに
-- ふりかえり・感想
 
 ※適当なタイミングで10分間の休憩を入れます
 
@@ -48,8 +45,7 @@ footer: 第1回 見て，感じて，描いてみよう | T.Shimizu © 2025
 
 # 本日使用するツール
 
-- iPad（第10世代）＋ Bluetoothキーボード ＋ マウス（なくてもOK）
-- Safari ブラウザ(Google Chrome でも可)
+- ブラウザ
 - https://editor.p5js.org/
 
 ---
@@ -284,122 +280,6 @@ function touchStarted() {
 
 ---
 
-# 解説：生成的アートとは？
-
--	「**コンピュータの偶然性**」を活かしたアート
--	例：毎回違うパターンが生成される
--	プログラムがルールを与え，結果は多様
-
----
-
-# 有名な生成アートの例
-
--	Generative Design
--	Vera Molnár
--	Tyler Hobbs (Fidenza)
-
----
-
-# Generative Design
-
-- 書籍『Generative Design』シリーズが有名
-- JavaScript / p5.js で造形ルールを実装
-- 「**秩序＋偶然**」で構成される視覚表現
-- 📘 公式サイト：[generative-gestaltung.de](http://www.generative-gestaltung.de/1-archive/)
-
----
-
-# Generative Design：作例
-
-- グリッド内でのシンプルな円の配置：[Link](https://editor.p5js.org/generative-design/sketches/P_1_1_1_01)
-- マウス位置による円弧の回転と重ね描き：[Link](https://editor.p5js.org/generative-design/sketches/P_2_1_3_01)
-- 画像をピクセル単位で分析し円で再描画：[Link](https://editor.p5js.org/generative-design/sketches/P_3_1_1_01)
-- タイポグラフィの一部を動的に再構成：[Link](https://editor.p5js.org/generative-design/sketches/P_4_3_2_01)
-- ランダムなラインの生成と重なり：[Link](https://editor.p5js.org/generative-design/sketches/P_1_2_2_01)
-
----
-
-# Vera Molnár（ヴェラ・モルナール）
-
-- ハンガリー出身，コンピュータアートの先駆者
-- 1960年代から生成的な図形に取り組む
-- 「**規則**」と「**わずかなズレ**」を重視した作品群
-- 📘公式サイト：http://www.veramolnar.com/
-
----
-
-<style scoped>
-  table { table-layout: fixed; width: 100%; display:table; font-size: 18px; }
-</style>
-
-|            作品タイトル            |                                                        内容                                                         |                                                                                        関連リンク                                                                                         |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| (Des)Ordres（1974）                | 完全な秩序（ordre）と，それを少しずつ壊していく（désordre）というテーマ．グリッドの構成要素が徐々にズレていく構成． | [DAM.org](https://dam.org/museum/artists_ui/artists/molnar-vera/des-ordres/)                                                                                                              |
-| Interruptions（1968）              | グリッドに配置された線分を「意図的に欠けさせる」ことで，視覚的なリズムや緊張感を作り出す                            | [DAM.org](https://dam.org/museum/artists_ui/artists/molnar-vera/interruptions/)                                                                                                           |
-| 1% de désordre（1976）             | 99%の規則と1%のズレというテーマで，ほとんど規則通りの構造に“わずかな逸脱”を持ち込む                                 | [The Art of Vera Molnar 1947-1974](https://www.gorillasun.de/content/images/2023/05/-dims4-default-67d1487-2147483647-strip-true-crop-5142x3492-0-0-resize-2048x1391--quality-90--1.jpeg) |
-| Structure de Quadrilatères（1972） | 正方形や四角形の回転・重なり・変形により，単純な幾何学構造から複雑な視覚効果を生む                                  | [The MFAH Collections](https://emuseum.mfah.org/objects/139838/structure-de-quadrilateres-square-structures)                                                                              |
-| Computer Drawings（1970年代）      | MolnárがFORTRANを用いて制作した初期のプロッタードローイングの総称．規則性と偶然性の探究                             | [MoMA](https://www.moma.org/collection/works/417832?artist_id=37083&page=1&sov_referrer=artist)                                                                                           |
-
----
-
-# Tyler Hobbs（タイラー・ホッブス）
-
-- 現代の代表的ジェネラティブアーティスト
-- 作品「Fidenza」でNFT界でも注目
-- 有機的・抽象的な美しさが特徴
-- 🌐 公式サイト：[tylerxhobbs.com](https://www.tylerxhobbs.com/)
-
----
-
-# Tyler Hobbs：作例（Fidenza）
-
-## 🎨 Fidenza（フィデンツァ）
-- 概要：2021年に発表された，999点からなるジェネラティブアートのシリーズ
-- 特徴：「**フローフィールド**」アルゴリズムを用いて，有機的で流れるような曲線と色彩のバリエーションを生成
-- Link：[Fidenza 公式ページ](https://www.tylerxhobbs.com/words/fidenza) ￼
-
-
----
-
-# 比較まとめ
-
-|       作家        |            特徴            |          技法例          |
-| ----------------- | -------------------------- | ------------------------ |
-| Generative Design | デザイン寄り，実装例が豊富 | グリッド・反復・配色制御 |
-| Vera Molnár       | 美術・理論の重視，初期世代 | 幾何学・ズレ・規則の操作 |
-| Tyler Hobbs       | 現代的・自然な造形         | 色・形・構造の融合       |
-
-
-
----
-
-# 今日の課題
-
-## 『感情』や『音楽』をテーマに
-
-- 自分だけのデジタルビジュアル作品を制作
--	テーマ例：好きな曲，気分，思い出
-- 色，形，動きの組合せで気持ちを表現
-
----
-
-# 制作のヒント
-
--	`random()`で偶然性を加える
--	`mouseDragged()`や`touchStarted()`で操作を加える
--	カラーコードや円・線の組合せで自分らしさを
--	背景・透明度で“余白”を表現
-
----
-
-# 振り返り
-
--	今日使った関数を思い出してみよう
--	今日のプログラムは何を表していた？
--	「感情」や「音楽」を表す工夫はできた？
-
----
-
 
 # 参考リンク
 - [p5.js公式サイト](https://p5js.org/)
@@ -486,11 +366,3 @@ fill(r, g, b, alpha);
 text("Hello", x, y);
 textSize(24);
 ```
-
----
-
-# おつかれさまでした！
-
-次回はセンサーなどを使ったインタラクティブアートに挑戦！
-
-好きな作品を探してみよう！
