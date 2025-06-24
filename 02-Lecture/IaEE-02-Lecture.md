@@ -23,7 +23,6 @@ footer: 第2回 見て，感じて，描いてみよう | T.Shimizu © 2025
 - 解説：生成的アートの考え方
 - インタラクティブコード紹介
 - 課題制作：「感情」や「音楽」をテーマに
-- ふりかえり
 
 ---
 
@@ -48,7 +47,7 @@ footer: 第2回 見て，感じて，描いてみよう | T.Shimizu © 2025
 - 書籍『Generative Design』シリーズが有名
 - JavaScript / p5.js で造形ルールを実装
 - 「**秩序＋偶然**」で構成される視覚表現
-- 📘 公式サイト：[generative-gestaltung.de](http://www.generative-gestaltung.de/1-archive/)
+- 公式サイト：[generative-gestaltung.de](http://www.generative-gestaltung.de/1-archive/)
 
 ---
 
@@ -135,14 +134,6 @@ footer: 第2回 見て，感じて，描いてみよう | T.Shimizu © 2025
 
 ---
 
-# 振り返り
-
--	今日使った関数を思い出してみよう
--	今日のプログラムは何を表していた？
--	「感情」や「音楽」を表す工夫はできた？
-
----
-
 
 # 参考リンク
 - [p5.js公式サイト](https://p5js.org/)
@@ -183,6 +174,7 @@ function draw() {
 - `r`,`g`,`b`,`gray`：0～255までの値
 - https://www.colordic.org/ ：このサイトを参考にすると値がわかりやすい
 - `noStroke()`,`noFill()`：枠線を描画しない，塗りつぶしをしない設定になる
+- 色を指定したらそれより下の描画はすべて指定した色になる
 
 ```js
 fill(r, g, b);
@@ -195,36 +187,57 @@ noStroke();
 
 # 図形（楕円と円）
 
+- `ellipse(x, y, w, h)`：座標`(x, y)`を中心に高さ`w`，幅`h`の楕円を描画
+- `circle(x, y, d)`：座標`(x, y)`を中心に直径`d`の円を描画
+
 ```js
 ellipse(中心のx座標, 中心のy座標, x方向の直径, y方向の直径)
 circle(中心のx座標, 中心のy座標, 直径)
 ```
 
+サンプル：https://editor.p5js.org/shimizu-sit/sketches/jttc3wUeN
+
 ---
 
 # 図形（長方形と正方形）
 
-```
+- `rect(x, y, w, h)`：左上の角が座標`(x, y)`の幅`W`，幅`h`の長方形を描画
+- `square(x, y, s)`：左上の角が座標`(x, y)`の一辺`s`の正方形を描画
+
+```js
 rect(左上隅のx座標, 左上隅のy座標, x方向の長さ, y方向の長さ)
 square(左上隅のx座標, 左上隅のy座標, 一辺の長さ)
 ```
+
+サンプル：https://editor.p5js.org/shimizu-sit/sketches/Mp3XOmkik
 
 ---
 
 # 図形（三角形と四角形）
 
-```
+- `triangle()`：三角形の3つの頂点`(x1, y1), (x2, y2), (x3, y3)`を指定して描画
+- `quad()`：四角形の4つの頂点`(x1, y1), (x2, y2), (x3, y3), (x4, y4)`を指定して描画
+
+```js
 triangle(x1, y1, x2, y2, x3, y3)
 quad(x1, y1, x2, y2, x3, y3, x4, y4)
 ```
+
+サンプル：https://editor.p5js.org/shimizu-sit/sketches/If8KWF05k
 
 ---
 
 # 図形（線と線の太さ）
 
+- `line()`：始点`(x1, y1)`から終点`(x2, y2)`へ線を描画
+- `strokeWeight()`：線の太さを指定
+
+```js
+strokeWeight(線の太さ);
+line(始点のx座標, 始点のy座標, 終点のx座標, 終点のy座標);
 ```
-line(始点のx座標, 始点のy座標, 終点のx座標, 終点のy座標)
-```
+
+サンプル：https://editor.p5js.org/shimizu-sit/sketches/Kq1WjnNz_
 
 ---
 
